@@ -13,7 +13,7 @@ From sklearn.tree import DecisionTreeClassifier and use criterion as entropy.
 Find the accuracy of the model and predict the required values by importing the required module from sklearn.
 Program:
 Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
-Developed by:  A JOSNS JAY AUTHERS 
+Developed by:  A JOANS JAY AUTHERS 
 RegisterNumber: 212221240019
 
 import pandas as pd
