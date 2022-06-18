@@ -1,71 +1,68 @@
-# Implementation-of-Decision-Tree-Regressor-Model-for-Predicting-the-Salary-of-the-Employee
+Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn
+AIM:
+To write a program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
 
-## AIM:
-To write a program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
+Equipments Required:
+Hardware – PCs
+Anaconda – Python 3.7 Installation / Moodle-Code Runner
+Algorithm
+Import the required libraries.
+Upload and read the dataset.
+Check for any null values using the isnull() function.
+From sklearn.tree import DecisionTreeClassifier and use criterion as entropy.
+Find the accuracy of the model and predict the required values by importing the required module from sklearn.
+Program:
+Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
+Developed by:  A JOSNS JAY AUTHERS 
+RegisterNumber: 212221240019
 
-## Equipments Required:
-1. Hardware – PCs
-2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
-
-## Algorithm
-1. Import the required libraries.
-2. Upload the csv file and read the dataset.
-3. Check for any null values using the isnull() function.
-4. From sklearn.tree inport DecisionTreeRegressor.
-5. Import metrics and calculate the Mean squared error.
-6. Apply metrics to the dataset, and predict the output.
-
-
-## Program:
-```
-Program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee.
-Developed by: A joans jay authers 
-RegisterNumber:  212221240019
-```
-```
 import pandas as pd
-data = pd.read_csv("Salary.csv")
+data=pd.read_csv("Employee.csv")
 data.head()
 data.info()
 data.isnull().sum()
+data["left"].value_counts()
 from sklearn.preprocessing import LabelEncoder
-le = LabelEncoder()
-data["Position"] = le.fit_transform(data["Position"])
+le=LabelEncoder()
+data["salary"]=le.fit_transform(data["salary"])
 data.head()
-x = data[["Position","Level"]]
-y = data["Salary"]
+x=data[["satisfaction_level","last_evalution","number_project","average_montly_hours","time_spend_company","work_accident","promotion_last_5years","salary"]]
+x.head()
+y=data["left"]
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,random_state=2)
-from sklearn.tree import DecisionTreeRegressor
-dt = DecisionTreeRegressor()
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=100)
+from sklearn.tree import DecisionTreeClassifier
+dt=DecisionTreeClassifier(criterion="entropy")
 dt.fit(x_train,y_train)
-y_pred = dt.predict(x_test)
+y_pred=dt.predict(x_test)
 from sklearn import metrics
-mse = metrics.mean_squared_error(y_test,y_pred)
-mse
-r2 = metrics.r2_score(y_test,y_pred)
-r2
-dt.predict([[5,6]])
-```
+accuracy=metrics.accuracy_score(y_test,y_pred)
+accuracy
+dt.predict([[0.5,0.8,9,260,6,0,1,2]])
+Output:
+Data Head
+head
 
-## Output:
-### Data Head:
-![head](https://user-images.githubusercontent.com/93427923/169694235-41a469cc-ff3e-4c56-b36c-029319ef1f94.png)
+Information:
+info
 
-### Data Info:
-![info](https://user-images.githubusercontent.com/93427923/169694238-85077655-4a64-4334-b451-997c7ea1937d.png)
+Null dataset:
+null
 
-### Data Head after applying LabelEncoder():
-![head2](https://user-images.githubusercontent.com/93427923/169694242-dd7cae7b-50db-4864-96aa-ca8eb07514e3.png)
+Value_counys():
+left
 
-### MSE:
-![mse](https://user-images.githubusercontent.com/93427923/169694248-eefed989-8fc7-4e80-b3af-992667d1936a.png)
+Data Head:
+head2
 
-### r2:
-![r2](https://user-images.githubusercontent.com/93427923/169694252-b17fc5dd-22fd-46e0-b8de-991fd12528ed.png)
+x.head():
+xhead
 
-### Data Prediction:
-![predict](https://user-images.githubusercontent.com/93427923/169694255-16669af0-0ed0-416e-b387-d63f2f3e9dc3.png)
+Accuracy:
+ss-7
 
-## Result:
-Thus the program to implement the Decision Tree Regressor Model for Predicting the Salary of the Employee is written and verified using python programming.
+Data Prediction:
+predict
+
+Result:
+Thus the program to implement the Decision Tree Classifier Model for Predicting Employee Churn is written and verified using python programming.
