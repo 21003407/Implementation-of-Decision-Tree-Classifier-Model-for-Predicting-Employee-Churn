@@ -1,20 +1,24 @@
-Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn
-AIM:
+# Implementation-of-Decision-Tree-Classifier-Model-for-Predicting-Employee-Churn
+
+## AIM:
 To write a program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
 
-Equipments Required:
-Hardware – PCs
-Anaconda – Python 3.7 Installation / Moodle-Code Runner
-Algorithm
-Import the required libraries.
-Upload and read the dataset.
-Check for any null values using the isnull() function.
-From sklearn.tree import DecisionTreeClassifier and use criterion as entropy.
-Find the accuracy of the model and predict the required values by importing the required module from sklearn.
-Program:
+## Equipments Required:
+1. Hardware – PCs
+2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
+
+## Algorithm
+1. Import the required libraries.
+2. Upload and read the dataset.    
+3. Check for any null values using the isnull() function.
+4. From sklearn.tree import DecisionTreeClassifier and use criterion as entropy.
+5. Find the accuracy of the model and predict the required values by importing the required module from sklearn.
+
+## Program:
+```
 Program to implement the Decision Tree Classifier Model for Predicting Employee Churn.
-Developed by:  A JOANS JAY AUTHERS 
-RegisterNumber: 212221240019
+Developed by: HARSHAVARDHINI M
+RegisterNumber: 212221240015 
 
 import pandas as pd
 data=pd.read_csv("Employee.csv")
@@ -39,30 +43,34 @@ from sklearn import metrics
 accuracy=metrics.accuracy_score(y_test,y_pred)
 accuracy
 dt.predict([[0.5,0.8,9,260,6,0,1,2]])
-Output:
-Data Head
-head
+```
 
-Information:
-info
+## Output:
+### Data Head
+![head](https://user-images.githubusercontent.com/93427208/169464817-681d5776-e0a4-415a-bc58-10e5a9f37cc2.png)
 
-Null dataset:
-null
+### Information:
+![info](https://user-images.githubusercontent.com/93427208/169464890-1a6c35c0-c7e5-43c8-9a40-2c6a0ee9a27b.png)
 
-Value_counys():
-left
+### Null dataset:
+![null](https://user-images.githubusercontent.com/93427208/169464953-b46cc08c-2005-4acf-8fe7-08cae47aa60c.png)
 
-Data Head:
-head2
+### Value_counys():
+![left](https://user-images.githubusercontent.com/93427208/169465015-f4c16c0c-4ca2-4fca-8a7a-f85cb423a999.png)
 
-x.head():
-xhead
+### Data Head:
+![head2](https://user-images.githubusercontent.com/93427208/169465081-dc868d4c-f879-42c1-9be5-8a7c690af454.png)
 
-Accuracy:
-ss-7
+### x.head():
+![xhead](https://user-images.githubusercontent.com/93427208/169465176-9b8d266d-ed47-4a8e-8781-19c04a0360c0.png)
 
-Data Prediction:
-predict
+### Accuracy:
+![ss-7](https://user-images.githubusercontent.com/93427208/169465389-51117326-7f9b-416e-b48b-a43961d7f513.png)
 
-Result:
-Thus the program to implement the Decision Tree Classifier Model for Predicting Employee Churn is written and verified using python programming.
+### Data Prediction:
+![predict](https://user-images.githubusercontent.com/93427208/169465493-62ba0d4e-3deb-44ec-a2f1-bd2707cd9b5c.png)
+
+
+
+## Result:
+Thus the program to implement the  Decision Tree Classifier Model for Predicting Employee Churn is written and verified using python programming.
